@@ -15,6 +15,7 @@ const colorDivs = ( props )=>{
                 <ColorDiv
                     key={color} 
                     clicked= {props.colorDivClicked}
+                    randomColor = {color}
                 />
             );
         })}

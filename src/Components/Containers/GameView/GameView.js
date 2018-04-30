@@ -22,7 +22,9 @@ class GameView extends Component{
         // getting number of color divs
         const numOfColorDivs = LEVELS[this.state.difficulty];
         // Randomly choosing game color div
-        const randomColorDiv = Math.floor(Math.random()*(numOfColorDivs+1));
+        const randomColorDiv = Math.floor(Math.random()*(numOfColorDivs));
+
+        console.log(randomColorDiv);
 
         for(let i=0;i<numOfColorDivs;i++){
             const red = Math.floor(Math.random()*256);
@@ -37,8 +39,10 @@ class GameView extends Component{
         return colors;
     }  
 
-    levelClickHandler = () =>{
-
+    levelClickHandler = (difficulty) =>{
+        this.setState({
+            difficulty:difficulty
+        });
     }
 
     colorDivClickHandler = (clickedColor)=>{

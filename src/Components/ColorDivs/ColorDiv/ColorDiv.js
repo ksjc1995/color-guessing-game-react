@@ -7,19 +7,11 @@ class ColorDiv extends Component {
         this.props.clicked(styles.backgroundColor);
     }
 
-    generateRandomRGB = ()=> {
-        const red = Math.floor(Math.random()*256);
-        const green = Math.floor(Math.random()*256);
-        const blue= Math.floor(Math.random()*256);
-        const color = 'rgb('+ red + ", " + green + ", " + blue + ")";
-        return color;
-    }  
-
     render(){
         const styles = {
             boxSizing: 'border-box',
             borderRadius: '5px',
-            backgroundColor: this.generateRandomRGB(),
+            backgroundColor:this.props.randomColor,
             width:'30%',
 	        float: 'left', 
         	margin: '1.66%',

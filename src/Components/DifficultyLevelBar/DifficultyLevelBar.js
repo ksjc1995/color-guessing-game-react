@@ -1,5 +1,14 @@
 import React from 'react';
-
-const difficultyLevelBar = () => (<h2>Hard, Medium, Easy</h2>);
+import Button from '../UI/Button/Button';
+import Aux from '../../hoc/Aux';
+const difficultyLevelBar = ( props ) => {
+    return(
+        <Aux>
+            <Button title='easy'  clicked={props.levelClick}/>
+            <Button title='medium'clicked={props.levelClick}/>
+            <Button title='hard'  clicked={props.levelClick}/>
+        </Aux>    
+    );
+};
 
 export default difficultyLevelBar;
