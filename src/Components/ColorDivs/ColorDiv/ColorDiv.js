@@ -15,7 +15,7 @@ class ColorDiv extends Component {
             width:'30%',
 	        float: 'left', 
         	margin: '1.66%',
-	        paddingBottom:'30%' /*to add some space*/
+	        paddingBottom:'25%' /*to add some space*/
         };
 
         return (
