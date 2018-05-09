@@ -13,13 +13,20 @@
 
 # Here are Some Screenshots: 
 
-![Gamestart](./screenshots/start.png?raw=true)
+<div style="text-align=center">
+    <img src="./screenshots/start.png" />
+</div>  
+        
 <hr>
-
-![Easy](./screenshots/easy.png?raw=true)
+<div style="text-align=center">
+    <img src="./screenshots/start.png" />
+</div>  
+           
 <hr>
+<div style="text-align=center">
+    <img src="./screenshots/start.png" />
+</div>  
 
-![Incorrect](./screenshots/incorrect.png?raw=true)
 <hr>
 
 
