@@ -12,7 +12,8 @@ const LEVELS = {
 class GameView extends Component{
     
     state = {
-        gameColor: 'rgb(255, 0, 0)',
+        gameColor:null,
+        chances:3, // including 0 i.e total chances = 3
         difficulty:null,
         wrong:null,
         isOver: false,
@@ -26,8 +27,14 @@ class GameView extends Component{
         const numOfColorDivs = LEVELS[difficulty];
         // Randomly choosing game color div
         const randomColorDiv = Math.floor(Math.random()*(numOfColorDivs));
-
-        console.log(randomColorDiv);
+        
+        const red = Math.floor(Math.random()*256);
+        const green = Math.floor(Math.random()*256);
+        const blue= Math.floor(Math.random()*256);
+        const gameColor = 'rgb('+ red + ", " + green + ", " + blue + ")";
+        this.setState({
+            gameColor:gameColor
+        })
 
         for(let i=0;i<numOfColorDivs;i++){
             const red = Math.floor(Math.random()*256);
@@ -35,7 +42,7 @@ class GameView extends Component{
             const blue= Math.floor(Math.random()*256);
             let color = 'rgb('+ red + ", " + green + ", " + blue + ")";
             if(randomColorDiv === i)
-                color = this.state.gameColor;
+                color = gameColor;
 
             colors.push(color);
         }
@@ -55,25 +62,42 @@ class GameView extends Component{
 
     colorDivClickHandler = (clickedColor)=>{
         console.log(clickedColor);
+        let chances = this.state.chances;
+        chances -= 1;
+        console.log(`Chances : ${chances}`);
+
+        if(chances === 0){
+            console.log("Game Over ");
+            this.setState({
+                isOver:true,
+                chances: 0
+            });
+            return;
+        }
+            
+
         if(this.state.gameColor === clickedColor)
            {
                 this.setState({
                     wrong:false,
-                    isOver:true
+                    isOver:true,
+                    chances:chances
                 });
            }
         else{
 
             this.setState({
-                wrong:true,
-                isOver:false
-            });
+                    chances:chances, 
+                    wrong:true,
+                    isOver:false
+                })
         }   
         }
 
     resetGameHandler = ()=>{
         this.setState({
             gameColor: 'rgb(255, 0, 0)',
+            chances:3,
             difficulty:null,
             wrong:null,
             isOver: false,
@@ -119,17 +143,25 @@ class GameView extends Component{
                     <h2 style={{color:'salmon'}}>To start the game, Please choose a difficulty level..</h2>
                 </Aux>);    
         }
-        else{
+        else if(this.state.isOver && this.state.chances !== 0){
             gameView = (
                 <Aux>
                     <h1 style={{color:'salmon',marginTop:'64px'}}>You Won!!</h1>
                     <h2 style={{color:'salmon'}}>To start again, Please click Reset</h2>
                 </Aux>);
         }
-        
+        else{
+            gameView = (
+                <Aux>
+                    <h1 style={{color:'salmon',marginTop:'64px'}}>You Lose!!</h1>
+                    <h2 style={{color:'salmon'}}>Chances Exhausted..</h2>
+                    <h3 style={{color:'salmon'}}>To start again, Please click Reset</h3>
+                </Aux>);
+        }
         return(
             <div>
                 <DifficultyLevelBar 
+                    chances   = {this.state.chances} 
                     levelClick={this.levelClickHandler}
                     resetClick={this.resetGameHandler}/>
                 {gameView}

@@ -8,6 +8,7 @@ const difficultyLevelBar = ( props ) => {
             <Button title='Medium'clicked={props.levelClick}/>
             <Button title='Hard'  clicked={props.levelClick}/>
             <Button title='Reset' reset={props.resetClick}/>
+            <span style={{marginLeft:"0.5em",fontWeight:"bold"}}>Chances Left: {props.chances}</span>
         </Aux>    
     );
 };
