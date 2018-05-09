@@ -13,7 +13,7 @@
 
 # Here are Some Screenshots: 
 
-<div style="text-align=center">
+<div style="text-align:center">
     <img src="./screenshots/start.png" />
 </div>  
 
@@ -23,7 +23,7 @@
 </div>  
            
 <hr>
-<div style="text-align=center">
+<div style="text-align:center">
     <img src="./screenshots/start.png" />
 </div>  
 
