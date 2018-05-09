@@ -5,8 +5,11 @@
 ### Features
 
     -Beautiful UI and User Friendly
+
     -Users can choose from 3 different levels 
+    
     -Users can reset the game anytime
+    
     -Users get 3 chances to guess the correct answer
 
 
@@ -19,12 +22,12 @@
 
 <hr>
 <p align="center">
-    <img src="./screenshots/start.png" />
+    <img src="./screenshots/easy.png" />
 </p>  
            
 <hr>
-<p align="center"">
-    <img src="./screenshots/start.png" />
+<p align="center">
+    <img src="./screenshots/incorrect.png" />
 </p>  
 
 <hr>
