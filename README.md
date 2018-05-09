@@ -16,9 +16,9 @@
 <div style="text-align=center">
     <img src="./screenshots/start.png" />
 </div>  
-        
+
 <hr>
-<div style="text-align=center">
+<div style="text-align:center">
     <img src="./screenshots/start.png" />
 </div>  
            
