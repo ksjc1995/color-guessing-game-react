@@ -20,14 +20,18 @@
 # Usage: 
 
 1) Clone the project or download zip
-    `git clone https://github.com/ksjc1995/Color-Guessing-Game-React-.git`
+
+`git clone https://github.com/ksjc1995/Color-Guessing-Game-React-.git`
     
 2) Open the project directory 
-    `cd directory name`
+    
+`cd directory name`
     
 3) Install Dependencies
-    `npm i`
+    
+`npm i`
 
 4) Run the development server
-    `npm start`
+    
+`npm start`
 
