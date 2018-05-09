@@ -13,19 +13,19 @@
 
 # Here are Some Screenshots: 
 
-<div style="text-align:center">
+<p align="center">
     <img src="./screenshots/start.png" />
-</div>  
+</p>  
 
 <hr>
-<div style="text-align:center">
+<p align="center">
     <img src="./screenshots/start.png" />
-</div>  
+</p>  
            
 <hr>
-<div style="text-align:center">
+<p align="center"">
     <img src="./screenshots/start.png" />
-</div>  
+</p>  
 
 <hr>
 
